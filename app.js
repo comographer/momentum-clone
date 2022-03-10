@@ -1,7 +1,8 @@
-const a = 5;
-const b = 2;
+let myName = "Como";
 
-console.log(`${a} is ${b}`);
+myName = "Nico";
+
+console.log(`Hello, ${myName}`);
 
 /* 2.1 Basic Data Types
 Integer: basic numbers; 1 ,13, 10000;
@@ -21,4 +22,13 @@ const a = 5;
 Now whenever you use your variable (a) in your code, it will bring the value (5);
 If your variable name is longer than a single word,
 convention is to use camelCaseSystem in JS;
+*/
+
+/* 2.3 const and let
+There are two ways of creating variables;
+const and let;
+const creates a fixed variable that cannot be changed;
+let creates a changeable variable;
+If you need to update your variable in the future, you should use let and otherwise const;
+By default, the convention is to use const unless you need to use let;
 */
