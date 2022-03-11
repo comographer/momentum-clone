@@ -1,8 +1,8 @@
-let myName = "Como";
+const amITall = true;
+const amIFat = null;
+let empty;
 
-myName = "Nico";
-
-console.log(`Hello, ${myName}`);
+console.log(amITall, amIFat, empty);
 
 /* 2.1 Basic Data Types
 Integer: basic numbers; 1 ,13, 10000;
@@ -31,4 +31,18 @@ const creates a fixed variable that cannot be changed;
 let creates a changeable variable;
 If you need to update your variable in the future, you should use let and otherwise const;
 By default, the convention is to use const unless you need to use let;
+In the past, JS only used var to create variables;
+*/
+
+/* 2.4 Booleans
+Booleans are basically true or false;
+It can used in various situations where you need info between two options;
+Is the user logged in? true or false;
+Is the video playing? true or false;
+etc;
+There are also data types in JS that shows there are no data;
+One of them is null;
+null means there is nothing in the variable and it is different from false;
+Another one like null is undefined;
+null = nothing, undefined = there is something on the memory but not defined;
 */
