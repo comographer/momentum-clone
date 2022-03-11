@@ -1,8 +1,14 @@
-const amITall = true;
-const amIFat = null;
-let empty;
+const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
 
-console.log(amITall, amIFat, empty);
+// Get Item from Array
+console.log(daysOfWeek);
+
+// Add one more day to the Array;
+daysOfWeek.push("sun");
+console.log(daysOfWeek);
+
+const toBuy = ["potato", "tomato", "pizza"];
+toBuy.push("kimbab");
 
 /* 2.1 Basic Data Types
 Integer: basic numbers; 1 ,13, 10000;
@@ -45,4 +51,14 @@ One of them is null;
 null means there is nothing in the variable and it is different from false;
 Another one like null is undefined;
 null = nothing, undefined = there is something on the memory but not defined;
+*/
+
+/* 2.5 Arrays
+Organizing data is very important in programming;
+The most basic data structure is saving data in an array;
+By using array syntax [], we can save data as list as below;
+const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+To find certain element in an array with index, arrayName[index];
+Keep in mind that array index starts from 0 in JS;
+To add one more element to the array, arrayName.push(newElement);
 */
