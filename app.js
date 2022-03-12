@@ -141,17 +141,26 @@ const calculator = {
   minus: (a, b) => console.log(a - b),
   multiply: (a, b) => console.log(a * b),
   divide: (a, b) => console.log(a / b),
+  power: (a, b) => console.log(a ** b),
+  remain: (a, b) => console.log(a % b),
 };
 
 calculator.plus(2, 5);
 calculator.minus(5, 3);
 calculator.multiply(5, 9);
 calculator.divide(8, 4);
+calculator.power(2, 3);
+calculator.remain(5, 2);
+
+const print = (arg) => console.log(arg);
+
+print("this is not Python");
 
 /* 2.8 Functions part Two
 To receive data and use it in a function, we put the argument in ();
 When creating a function, we should give name to the argument
 and asign the argument within the function;
+When there are multiple arguments, order of arguments is important;
 
 const sayHello = (name, age) => console.log(`Hello ${name}, ${age}`)
 
