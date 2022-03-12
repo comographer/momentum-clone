@@ -1,14 +1,14 @@
-const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
+const player = {
+  name: "como",
+  point: 10,
+  handsome: false,
+  fat: "little bit",
+};
 
-// Get Item from Array
-console.log(daysOfWeek);
-
-// Add one more day to the Array;
-daysOfWeek.push("sun");
-console.log(daysOfWeek);
-
-const toBuy = ["potato", "tomato", "pizza"];
-toBuy.push("kimbab");
+console.log(player.name, player.point);
+player.name = "nico";
+player.point += 15;
+console.log(player.name, player.point);
 
 /* 2.1 Basic Data Types
 Integer: basic numbers; 1 ,13, 10000;
@@ -61,4 +61,13 @@ const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 To find certain element in an array with index, arrayName[index];
 Keep in mind that array index starts from 0 in JS;
 To add one more element to the array, arrayName.push(newElement);
+*/
+
+/* 2.6 Objects
+Object is the most common way to organize data in programming;
+Within an object, we can store many properties and values;
+const objectName = {propertyNameOne: valueOne, propertyNameTwo: valueTwo};
+To call value of a property: objectName.propertyName;
+To change value of a property: objectName.propertyName = newValue;
+To add new property and value: objectName.newProperty = newValue;
 */
