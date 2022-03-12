@@ -168,3 +168,19 @@ NaN means Not a Number;
 
 Keep in mind that the arguments exist only within the function;
 */
+
+const age = 96;
+const calculateKrAge = (age) => {
+  return age + 2;
+};
+
+const krAge = calculateKrAge(age);
+
+console.log(krAge);
+
+/* 2.11 Returns
+To get a value out of a function, we need to use return;
+Reason why we need to get value out of a function is to use it in code;
+When you use the keyword return in your function,
+the function will return the value of the function within your code;
+*/
