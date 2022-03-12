@@ -1,14 +1,6 @@
-const player = {
-  name: "como",
-  point: 10,
-  handsome: false,
-  fat: "little bit",
-};
+const hello = (name) => console.log(`Hello my name is ${name}`);
 
-console.log(player.name, player.point);
-player.name = "nico";
-player.point += 15;
-console.log(player.name, player.point);
+hello("como");
 
 /* 2.1 Basic Data Types
 Integer: basic numbers; 1 ,13, 10000;
@@ -70,4 +62,14 @@ const objectName = {propertyNameOne: valueOne, propertyNameTwo: valueTwo};
 To call value of a property: objectName.propertyName;
 To change value of a property: objectName.propertyName = newValue;
 To add new property and value: objectName.newProperty = newValue;
+*/
+
+/* 2.7 Functions part One
+Function is a piece of code that you can execute repeatedly;
+To minimize duplication, programmers create and use function;
+To create a function: function functionName(arguments) {functionCode};
+In ES6: const functionName = (arguments) => {functionCode};
+To execute the function: functionName();
+To execute a function with additional info, we give arguments to the function;
+Arguments are given inside () part of the function;
 */
