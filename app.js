@@ -1,6 +1,31 @@
-const hello = (name) => console.log(`Hello my name is ${name}`);
+const plus = (a, b) => console.log(a + b);
 
-hello("como");
+const divide = (a, b) => console.log(a / b);
+
+plus(1, 5);
+
+divide(6, 2);
+
+const player = {
+  name: "nico",
+  sayHello: function (personName) {
+    console.log("hello! " + personName);
+  },
+};
+
+player.sayHello("lynn");
+
+const calculator = {
+  plus: (a, b) => console.log(a + b),
+  minus: (a, b) => console.log(a - b),
+  multiply: (a, b) => console.log(a * b),
+  divide: (a, b) => console.log(a / b),
+};
+
+calculator.plus(2, 5);
+calculator.minus(5, 3);
+calculator.multiply(5, 9);
+calculator.divide(8, 4);
 
 /* 2.1 Basic Data Types
 Integer: basic numbers; 1 ,13, 10000;
@@ -72,4 +97,16 @@ In ES6: const functionName = (arguments) => {functionCode};
 To execute the function: functionName();
 To execute a function with additional info, we give arguments to the function;
 Arguments are given inside () part of the function;
+*/
+
+/* 2.8 Functions part Two
+To receive data and use it in a function, we put the argument in ();
+When creating a function, we should give name to the argument
+and asign the argument within the function;
+
+const sayHello = (name, age) => console.log(`Hello ${name}, ${age}`)
+
+NaN means Not a Number;
+
+Keep in mind that the arguments exist only within the function;
 */
