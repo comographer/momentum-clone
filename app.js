@@ -184,3 +184,30 @@ Reason why we need to get value out of a function is to use it in code;
 When you use the keyword return in your function,
 the function will return the value of the function within your code;
 */
+
+const userAge = parseInt(prompt("How old are you?"));
+
+if (isNaN(userAge) || userAge < 0)
+  console.log("Please write a positive number");
+else if (userAge < 18) console.log("You are too young too drink");
+else if (userAge >= 18 && userAge <= 50) console.log("You can drink");
+else console.log("You are too old");
+
+/* 2.13 - 2.15 Conditionals
+Conditionals helps you check whether something is true or false;
+ex) if user is logged in, if weather data is available, etc;
+
+isNaN() function returns true or false depending on whether arg is NaN or not;
+
+To make a conditional: 
+if (condition) {
+  execute if condition === true
+} else if (condition) {
+  execute if second condition is true
+} else {
+  excute if none of the given conditions are true
+}
+
+When you combine more than one condition,
+&& means "and" and || means "or";
+*/
