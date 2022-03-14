@@ -45,26 +45,17 @@ From "window", we can also check status of the internet;
 
 const h1 = document.querySelector(".hello");
 
-const handleTitleClick = () => (h1.style.color = "blue");
-
-const handleMouseEnter = () => (h1.innerText = "Mouse is here");
-
-const handleMouseLeave = () => (h1.innerText = "Mouse is Gone");
+const handleTitleClick = () => {
+  const currentColor = h1.style.color;
+  let newColor;
+  if (currentColor === "blue") newColor = "tomato";
+  else newColor = "blue";
+  h1.style.color = newColor;
+};
 
 h1.addEventListener("click", handleTitleClick);
-h1.addEventListener("mouseenter", handleMouseEnter);
-h1.addEventListener("mouseleave", handleMouseLeave);
 
-const handleWindowResize = () =>
-  (document.body.style.backgroundColor = "tomato");
-
-const handleWindowCopy = () => alert("Copied");
-
-const handleWindowOffline = () => alert("SOS No WiFi");
-
-const handleWindowOnline = () => alert("Good to Go");
-
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
-window.addEventListener("offline", handleWindowOffline);
-window.addEventListener("online", handleWindowOnline);
+/* 3.6 CSS in Javascript
+When applying CSS using JS, convention is to utilize adding or removing class;
+By creating the CSS style on certain class, we can apply them using JS;
+*/
