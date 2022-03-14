@@ -24,14 +24,6 @@ querySelectorAll will select all elements that match the query;
 within querySelector, you can use CSS Selectors such as nth-child, etc;
 */
 
-const title = document.querySelector(".hello");
-
-const handleTitleClick = () => {
-  console.log(title.style.color);
-};
-
-title.addEventListener("click", handleTitleClick);
-
 /* 3.3 Events
 On JS, what we will do the most is listening to events;
 Events are everything that can happen in the browser;
@@ -42,4 +34,20 @@ This funciton takes two arguments: "event" & "handlerFunction";
 
 "event" : the event we are trying to catch;
 "handlerFunction" : function that will be executed when the "event" occurs;
+*/
+
+const title = document.querySelector(".hello");
+
+const handleTitleClick = () => (title.style.color = "blue");
+
+const handleMouseEnter = () => (title.innerText = "Mouse is here");
+
+const handleMouseLeave = () => (title.innerText = "Mouse is Gone");
+
+title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleMouseEnter);
+title.addEventListener("mouseleave", handleMouseLeave);
+
+/* 3.4 Events part Two
+We can find 
 */
