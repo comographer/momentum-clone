@@ -16,14 +16,30 @@ const title = document.getElementById("title");
 title.innerText = "Got You!";
 */
 
-const hellos = document.querySelector(".hello:nth-child(2)");
-
-hellos.innerText = "which one is selected?";
-
 /* 3.2 Searching For Elements
 There are many different functions in document object to select elements;
 Among them, the most frequently used function is document.querySelector();
 With querySelector, we can select single element that matchs the query;
 querySelectorAll will select all elements that match the query;
 within querySelector, you can use CSS Selectors such as nth-child, etc;
+*/
+
+const title = document.querySelector(".hello");
+
+const handleTitleClick = () => {
+  console.log(title.style.color);
+};
+
+title.addEventListener("click", handleTitleClick);
+
+/* 3.3 Events
+On JS, what we will do the most is listening to events;
+Events are everything that can happen in the browser;
+connecting to wifi, mouse is on top of h1, mouse leaves the windows, etc;
+
+We can listen to events with the function: addEventListener();
+This funciton takes two arguments: "event" & "handlerFunction";
+
+"event" : the event we are trying to catch;
+"handlerFunction" : function that will be executed when the "event" occurs;
 */
