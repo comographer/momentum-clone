@@ -43,19 +43,23 @@ Using "window", we can detect events such as "resize", "copy" etc;
 From "window", we can also check status of the internet;
 */
 
-const h1 = document.querySelector(".hello");
+const h1 = document.querySelector("h1");
 
 const handleTitleClick = () => {
-  const currentColor = h1.style.color;
-  let newColor;
-  if (currentColor === "blue") newColor = "tomato";
-  else newColor = "blue";
-  h1.style.color = newColor;
+  h1.classList.toggle("clicked");
 };
 
 h1.addEventListener("click", handleTitleClick);
 
-/* 3.6 CSS in Javascript
+/* 3.6 - 3.8 CSS in Javascript
 When applying CSS using JS, convention is to utilize adding or removing class;
 By creating the CSS style on certain class, we can apply them using JS;
+
+If we are only applying one style, we can use element.className = "newClass";
+However, this method has risk of resetting the whole classes on an element;
+Thus when there are multiple classes, we first check conditional with element.classList.contains();
+After checking, we can add or remove a class : element.classList.remove() or element.classList.add();
+
+Another way to do it is to toggle the className;
+By doing element.classList.toggle("className"), it will add or remove the className depending whether element has it or not;
 */
