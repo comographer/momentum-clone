@@ -2,7 +2,10 @@ const clock = document.querySelector(".clock");
 
 const getClock = () => {
   const date = new Date();
-  clock.innerText = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  const hours = String(date.getHours()).padStart(2, "0");
+  const minutes = String(date.getMinutes()).padStart(2, "0");
+  const seconds = String(date.getSeconds()).padStart(2, "0");
+  clock.innerText = `${hours}:${minutes}:${seconds}`;
 };
 
 getClock();
@@ -26,4 +29,17 @@ const date = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`
 To get current Time in JS;
 const today = new Date();
 const time = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`
+*/
+
+/* 5.2 PadStart
+String.padStart(targetLength, "padString");
+padStart() function takes two arguments;
+First argument is the targetLength of the target string;
+If string.length < targetLength, front part of the string is filled with the second argument, "padString";
+If second argument is missing, front part is filled with spaces;
+
+There is also String.padEnd() that fills the back part;
+
+Since getHours(), getMinutes() and getSeconds() return only length 1 numbers for 1 digits,
+we can use padStart() on those numbers to make the length consistent;
 */
