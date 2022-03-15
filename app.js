@@ -80,7 +80,7 @@ In order to prevent form refreshing the browser when input is submitted:
 event.preventDefault();
 */
 
-/* 4.2 Events
+/* 4.2 - 4.3 Events
 To prevent certain default behavior of HTML elements,
 on the callback function, we put in the first argument, usually called (event),
 and write the line event.preventDefault();
