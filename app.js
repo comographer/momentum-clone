@@ -8,23 +8,12 @@ const onLoginSubmit = (event) => {
   event.preventDefault();
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
+  localStorage.setItem("username", username);
   greeting.innerText = `Hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 };
 
 loginForm.addEventListener("submit", onLoginSubmit);
-
-/* 4.4 Getting Username
-When you want to hide certain element, you can apply with a ".hidden" class;
-".hidden" class will have property "display: none";
-Same technic can be used for element you want to hide until certain event happens;
-
-When certain className is used repeatedly, convention is to save it as a variable;
-When you are saving a string such as className as variable, convention is to make variable name uppercase;
-
-When combining variables with strings, we can use below format:
-`string ${variable}`;
-*/
 
 /* 3.0 The Document Object
 JS can access the HTML from the "document" object;
@@ -101,4 +90,26 @@ event.preventDefault();
 To prevent certain default behavior of HTML elements,
 on the callback function, we put in the first argument, usually called (event),
 and write the line event.preventDefault();
+*/
+
+/* 4.4 Getting Username
+When you want to hide certain element, you can apply with a ".hidden" class;
+".hidden" class will have property "display: none";
+Same technic can be used for element you want to hide until certain event happens;
+
+When certain className is used repeatedly, convention is to save it as a variable;
+When you are saving a string such as className as variable, convention is to make variable name uppercase;
+
+When combining variables with strings, we can use below format:
+`string ${variable}`;
+*/
+
+/* 4.5 Saving Username
+When we want to save things, like how YT remembers your volume value,
+There is a useful API called localStorage that we can use;
+localStorage lets you save things on the browser(more on MDN);
+
+To save value: localStorage.setItem("key", "value");
+To get value: localStorage.getItem("key");
+To remove value: localStorage.removeItem("key");
 */
