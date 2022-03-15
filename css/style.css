@@ -8,8 +8,13 @@ body {
   height: 100vh;
   background-color: grey;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+h2 {
+  margin: 50px;
 }
 
 .hidden {
