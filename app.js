@@ -1,13 +1,13 @@
+const loginForm = document.querySelector(".login-form");
 const loginInput = document.querySelector(".login-form input");
-const loginBtn = document.querySelector(".login-form input:nth-child(2)");
 
-const onLoginBtnClick = (event) => {
+const onLoginSubmit = (event) => {
   event.preventDefault();
   const username = loginInput.value;
   console.log(username);
 };
 
-loginBtn.addEventListener("click", onLoginBtnClick);
+loginForm.addEventListener("submit", onLoginSubmit);
 
 /* 3.0 The Document Object
 JS can access the HTML from the "document" object;
@@ -78,4 +78,10 @@ If we want to validate input such as maxlength or required,
 we should put the input inside of <form> tag;
 In order to prevent form refreshing the browser when input is submitted:
 event.preventDefault();
+*/
+
+/* 4.2 Events
+To prevent certain default behavior of HTML elements,
+on the callback function, we put in the first argument, usually called (event),
+and write the line event.preventDefault();
 */
