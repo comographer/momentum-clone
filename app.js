@@ -1,3 +1,10 @@
+const loginInput = document.querySelector(".login-form input");
+const loginBtn = document.querySelector(".login-form button");
+
+const onLoginBtnClick = () => console.log(`Hello, ${loginInput.value}`);
+
+loginBtn.addEventListener("click", onLoginBtnClick);
+
 /* 3.0 The Document Object
 JS can access the HTML from the "document" object;
 By using this, we can point to different HTML elements from JS and modify them;
@@ -43,14 +50,6 @@ Using "window", we can detect events such as "resize", "copy" etc;
 From "window", we can also check status of the internet;
 */
 
-const h1 = document.querySelector("h1");
-
-const handleTitleClick = () => {
-  h1.classList.toggle("clicked");
-};
-
-h1.addEventListener("click", handleTitleClick);
-
 /* 3.6 - 3.8 CSS in Javascript
 When applying CSS using JS, convention is to utilize adding or removing class;
 By creating the CSS style on certain class, we can apply them using JS;
@@ -62,4 +61,10 @@ After checking, we can add or remove a class : element.classList.remove() or ele
 
 Another way to do it is to toggle the className;
 By doing element.classList.toggle("className"), it will add or remove the className depending whether element has it or not;
+*/
+
+/* 4.0 Input Values
+When creating repeating elements in HTML that you will grab using JS,
+It is better to place them within a div with a unique class;
+When grabbing value of an HTML input element: htmlElement.value;
 */
