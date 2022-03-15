@@ -1,7 +1,11 @@
 const loginInput = document.querySelector(".login-form input");
-const loginBtn = document.querySelector(".login-form button");
+const loginBtn = document.querySelector(".login-form input:nth-child(2)");
 
-const onLoginBtnClick = () => console.log(`Hello, ${loginInput.value}`);
+const onLoginBtnClick = (event) => {
+  event.preventDefault();
+  const username = loginInput.value;
+  console.log(username);
+};
 
 loginBtn.addEventListener("click", onLoginBtnClick);
 
@@ -67,4 +71,11 @@ By doing element.classList.toggle("className"), it will add or remove the classN
 When creating repeating elements in HTML that you will grab using JS,
 It is better to place them within a div with a unique class;
 When grabbing value of an HTML input element: htmlElement.value;
+*/
+
+/* 4.1 Form Submission
+If we want to validate input such as maxlength or required,
+we should put the input inside of <form> tag;
+In order to prevent form refreshing the browser when input is submitted:
+event.preventDefault();
 */
