@@ -27,10 +27,6 @@ if (savedUsername === null) {
   paintGreetings(savedUsername);
 }
 
-/* 4.6 Loading Username
-
-*/
-
 /* 3.0 The Document Object
 JS can access the HTML from the "document" object;
 By using this, we can point to different HTML elements from JS and modify them;
@@ -128,4 +124,10 @@ localStorage lets you save things on the browser(more on MDN);
 To save value: localStorage.setItem("key", "value");
 To get value: localStorage.getItem("key");
 To remove value: localStorage.removeItem("key");
+*/
+
+/* 4.6 Loading Username
+When you have a saved username on localStorage and want your program to act accordingly,
+you can setup conditional to check localStorage and assign action according whether
+there is saved value localStorage or not;
 */
