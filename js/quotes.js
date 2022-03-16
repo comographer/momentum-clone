@@ -46,8 +46,8 @@ const quote = document.querySelector(".quote span:nth-child(1)");
 const author = document.querySelector(".quote span:nth-child(2)");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+quote.innerText = `"${todaysQuote.quote}"`;
+author.innerText = `- ${todaysQuote.author}`;
 
 /* 6.0 Quotes
 In order to create a random number, we can use the Math module;
