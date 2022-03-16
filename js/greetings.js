@@ -1,6 +1,7 @@
 const loginForm = document.querySelector(".login-form");
 const loginInput = document.querySelector(".login-form input");
 const greeting = document.querySelector(".greeting");
+const logoutBtn = document.querySelector("h6");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -16,6 +17,7 @@ const onLoginSubmit = (event) => {
 const paintGreetings = (username) => {
   greeting.innerText = `Hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
+  logoutBtn.classList.remove(HIDDEN_CLASSNAME);
 };
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
@@ -24,8 +26,18 @@ if (savedUsername === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
+  logoutBtn.classList.remove(HIDDEN_CLASSNAME);
   paintGreetings(savedUsername);
 }
+
+const handleLogout = () => {
+  localStorage.removeItem(USERNAME_KEY);
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  logoutBtn.classList.add(HIDDEN_CLASSNAME);
+  greeting.classList.add(HIDDEN_CLASSNAME);
+};
+
+logoutBtn.addEventListener("click", handleLogout);
 
 /* 3.0 The Document Object
 JS can access the HTML from the "document" object;
