@@ -41,3 +41,18 @@ const quotes = [
     author: "Sheda Savage",
   },
 ];
+
+const quote = document.querySelector(".quote span:nth-child(1)");
+const author = document.querySelector(".quote span:nth-child(2)");
+const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+quote.innerText = todaysQuote.quote;
+author.innerText = todaysQuote.author;
+
+/* 6.0 Quotes
+In order to create a random number, we can use the Math module;
+Math.random() gives you a random value between 0 and 1;
+Math.random() * 10 gives you a random float between 0 and 1;
+To make floats into integer, we can use from below options:
+Math.round(); Math.ceil(); Math.floor();
+*/
