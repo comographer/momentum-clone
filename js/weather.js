@@ -16,7 +16,7 @@ const onGeoSuccess = (position) => {
 };
 
 const onGeoError = () => {
-  alert("Can't find you. No weather for you");
+  city.innerText = "Couldn't get your location :(";
 };
 
 navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
